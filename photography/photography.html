@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en" class="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Photography Grid Website</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    .masonry {
+      column-count: 3;
+      column-gap: 1rem;
+    }
+    .masonry img {
+      break-inside: avoid;
+      margin-bottom: 1rem;
+      border-radius: 0.75rem;
+      width: 100%;
+      display: block;
+    }
+    @media (max-width: 768px) {
+      .masonry {
+        column-count: 1;
+      }
+    }
+  </style>
+</head>
+<body class="bg-white text-gray-900 dark:bg-gray-900 dark:text-white transition-colors duration-300">
+
+  <!-- Header -->
+  <header class="flex justify-between items-center p-6">
+    <h1 class="text-2xl font-bold">My Photography</h1>
+    <button onclick="toggleTheme()" class="px-4 py-2 rounded bg-gray-800 text-white dark:bg-white dark:text-black transition">
+      Toggle Theme
+    </button>
+  </header>
+
+  <!-- Grid -->
+  <main class="px-6">
+    <div class="masonry">
+      <img src="https://images.pexels.com/photos/414171/pexels-photo-414171.jpeg" alt="Photo 1">
+      <img src="https://images.pexels.com/photos/2014422/pexels-photo-2014422.jpeg" alt="Photo 2">
+      <img src="https://images.pexels.com/photos/3225517/pexels-photo-3225517.jpeg" alt="Photo 3">
+      <img src="https://images.pexels.com/photos/210186/pexels-photo-210186.jpeg" alt="Photo 4">
+      <img src="https://images.pexels.com/photos/39811/pexels-photo-39811.jpeg" alt="Photo 5">
+      <img src="https://images.pexels.com/photos/34950/pexels-photo.jpg" alt="Photo 6">
+    </div>
+  </main>
+
+  <!-- Script for Theme Toggle -->
+  <script>
+    function toggleTheme() {
+      document.documentElement.classList.toggle('dark');
+    }
+  </script>
+</body>
+</html>
