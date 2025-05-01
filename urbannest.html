@@ -1,240 +1,188 @@
 <!DOCTYPE html>
-
-/* styles.css */
-
-body {
-  font-family: 'Segoe UI', sans-serif;
-  margin: 0;
-  padding: 0;
-  background-color: #faf6f1;
-  color: #333;
-}
-
-.header {
-  background-color: #fff8f0;
-  padding: 1rem 2rem;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  border-bottom: 1px solid #ddd;
-}
-
-.logo {
-  font-size: 1.5rem;
-  font-weight: bold;
-  color: #7c4f2b;
-}
-
-.nav .menu {
-  list-style: none;
-  display: flex;
-  gap: 1rem;
-}
-
-.nav .menu li a {
-  text-decoration: none;
-  color: #5a3d2b;
-  font-weight: 500;
-}
-
-.menu-toggle {
-  display: none;
-  font-size: 1.5rem;
-  background: none;
-  border: none;
-}
-
-.section {
-  padding: 2rem;
-}
-
-.section h2 {
-  color: #7c4f2b;
-  margin-bottom: 1rem;
-}
-
-.product-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
-  gap: 1rem;
-  max-height: 400px;
-  overflow-y: auto;
-}
-
-.product-grid a,
-.product-grid .product {
-  background-color: #fff;
-  border: 1px solid #ddd;
-  padding: 1rem;
-  text-align: center;
-  border-radius: 8px;
-  text-decoration: none;
-  color: inherit;
-  transition: transform 0.2s ease;
-}
-
-.product-grid a:hover,
-.product-grid .product:hover {
-  transform: scale(1.02);
-  border-color: #a87f5f;
-}
-
-.product img {
-  max-width: 100%;
-  height: auto;
-  margin-bottom: 0.5rem;
-}
-
-.fomo-box {
-  background-color: #ffe8cc;
-  padding: 1.5rem;
-  margin: 2rem;
-  text-align: center;
-  border-left: 5px solid #ff9933;
-  font-weight: bold;
-}
-
-.footer {
-  background-color: #fff3e0;
-  padding: 1rem;
-  text-align: center;
-  font-size: 0.9rem;
-  color: #555;
-  border-top: 1px solid #ddd;
-}
-
-.footer a {
-  color: #7c4f2b;
-  text-decoration: none;
-  margin: 0 0.5rem;
-}
-
-/* Responsive Styles */
-@media (max-width: 768px) {
-  .menu {
-    display: none;
-    flex-direction: column;
-    gap: 0.5rem;
-    background-color: #fff8f0;
-    position: absolute;
-    top: 60px;
-    right: 20px;
-    padding: 1rem;
-    border: 1px solid #ccc;
-  }
-
-  .menu.active {
-    display: flex;
-  }
-
-  .menu-toggle {
-    display: block;
-  }
-
-  .product-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-
-@media (max-width: 480px) {
-  .product-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-
-
 <html lang="en">
-
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>UrbanNest - Home Decor Deals</title>
-  <link rel="stylesheet" href="styles.css" />
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #faf6f1;
+      color: #333;
+    }
+    .header {
+      background-color: #fff8f0;
+      padding: 1rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 1px solid #ddd;
+    }
+    .logo {
+      font-size: 1.5rem;
+      font-weight: bold;
+      color: #7c4f2b;
+    }
+    .nav .menu {
+      list-style: none;
+      display: flex;
+      gap: 1rem;
+    }
+    .nav .menu li a {
+      text-decoration: none;
+      color: #5a3d2b;
+      font-weight: 500;
+    }
+    .menu-toggle {
+      display: none;
+      font-size: 1.5rem;
+      background: none;
+      border: none;
+    }
+    .section {
+      padding: 2rem;
+    }
+    .section h2 {
+      color: #7c4f2b;
+      margin-bottom: 1rem;
+    }
+    .product-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+      gap: 1rem;
+      max-height: 400px;
+      overflow-y: auto;
+    }
+    .product-grid a,
+    .product-grid .product {
+      background-color: #fff;
+      border: 1px solid #ddd;
+      padding: 1rem;
+      text-align: center;
+      border-radius: 8px;
+      text-decoration: none;
+      color: inherit;
+      transition: transform 0.2s ease;
+    }
+    .product-grid a:hover,
+    .product-grid .product:hover {
+      transform: scale(1.02);
+      border-color: #a87f5f;
+    }
+    .product img {
+      max-width: 100%;
+      height: auto;
+      margin-bottom: 0.5rem;
+    }
+    .fomo-box {
+      background-color: #ffe8cc;
+      padding: 1.5rem;
+      margin: 2rem;
+      text-align: center;
+      border-left: 5px solid #ff9933;
+      font-weight: bold;
+    }
+    .footer {
+      background-color: #fff3e0;
+      padding: 1rem;
+      text-align: center;
+      font-size: 0.9rem;
+      color: #555;
+      border-top: 1px solid #ddd;
+    }
+    .footer a {
+      color: #7c4f2b;
+      text-decoration: none;
+      margin: 0 0.5rem;
+    }
+    @media (max-width: 768px) {
+      .menu {
+        display: none;
+        flex-direction: column;
+        gap: 0.5rem;
+        background-color: #fff8f0;
+        position: absolute;
+        top: 60px;
+        right: 20px;
+        padding: 1rem;
+        border: 1px solid #ccc;
+      }
+      .menu.active {
+        display: flex;
+      }
+      .menu-toggle {
+        display: block;
+      }
+      .product-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+    @media (max-width: 480px) {
+      .product-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+  </style>
 </head>
-
 <body>
   <header class="header">
     <div class="logo">UrbanNest</div>
     <nav class="nav">
-      <button class="menu-toggle">☰</button>
+      <button class="menu-toggle" onclick="document.querySelector('.menu').classList.toggle('active')">☰</button>
       <ul class="menu">
-        <li><a href="#">Phones</a></li>
-        <li><a href="#">Laptops</a></li>
-        <li><a href="#">Music</a></li>
-        <li><a href="#">Household</a></li>
-        <li><a href="#">Gifts</a></li>
-        <li><a href="#">Under 999</a></li>
+        <li><a href="#phones">Phones</a></li>
+        <li><a href="#laptops">Laptops</a></li>
+        <li><a href="#music">Music</a></li>
+        <li><a href="#household">Household</a></li>
+        <li><a href="#gifts">Gifts</a></li>
+        <li><a href="#under999">Under ₹999</a></li>
       </ul>
     </nav>
   </header>
 
   <main>
-    <section class="section deals">
+    <section class="section">
       <h2>Deals of the Day</h2>
       <div class="product-grid">
-        <!-- 8 direct links -->
-        <a href="https://amzn.to/example1" target="_blank">Deal 1</a>
-        <a href="https://amzn.to/example2" target="_blank">Deal 2</a>
-        <a href="https://amzn.to/example3" target="_blank">Deal 3</a>
-        <a href="https://amzn.to/example4" target="_blank">Deal 4</a>
-        <a href="https://amzn.to/example5" target="_blank">Deal 5</a>
-        <a href="https://amzn.to/example6" target="_blank">Deal 6</a>
-        <a href="https://amzn.to/example7" target="_blank">Deal 7</a>
-        <a href="https://amzn.to/example8" target="_blank">Deal 8</a>
+        <!-- Example Amazon Affiliate Links -->
+        <a href="https://www.amazon.in/dp/B0XYZ1" target="_blank"><img src="https://via.placeholder.com/150" alt="Product 1"></a>
+        <a href="https://www.amazon.in/dp/B0XYZ2" target="_blank"><img src="https://via.placeholder.com/150" alt="Product 2"></a>
+        <a href="https://www.amazon.in/dp/B0XYZ3" target="_blank"><img src="https://via.placeholder.com/150" alt="Product 3"></a>
+        <a href="https://www.amazon.in/dp/B0XYZ4" target="_blank"><img src="https://via.placeholder.com/150" alt="Product 4"></a>
+        <a href="https://www.amazon.in/dp/B0XYZ5" target="_blank"><img src="https://via.placeholder.com/150" alt="Product 5"></a>
+        <a href="https://www.amazon.in/dp/B0XYZ6" target="_blank"><img src="https://via.placeholder.com/150" alt="Product 6"></a>
+        <a href="https://www.amazon.in/dp/B0XYZ7" target="_blank"><img src="https://via.placeholder.com/150" alt="Product 7"></a>
+        <a href="https://www.amazon.in/dp/B0XYZ8" target="_blank"><img src="https://via.placeholder.com/150" alt="Product 8"></a>
       </div>
     </section>
 
     <div class="fomo-box">
-      <p>Don't miss out on these amazing home decor deals! Limited time only!</p>
+      Don't miss out on today’s exclusive decor deals!
     </div>
 
-    <section class="section featured">
-      <h2>Featured in Plants</h2>
+    <section class="section">
+      <h2>Featured Products</h2>
       <div class="product-grid">
-        <!-- Add latest product cards -->
-        <!-- Example -->
-        <div class="product">
-          <a href="https://amzn.to/plant1" target="_blank">
-            <img src="https://via.placeholder.com/200x200" alt="Plant" />
-            <p>Artificial Bonsai Plant</p>
-          </a>
-        </div>
-        <!-- Repeat similar cards for more products -->
-      </div>
-
-      <h2>Featured in Lights</h2>
-      <div class="product-grid">
-        <!-- Add similar blocks -->
-      </div>
-
-      <h2>Featured in Furniture</h2>
-      <div class="product-grid">
-        <!-- Add similar blocks -->
-      </div>
-
-      <h2>Featured in Decor</h2>
-      <div class="product-grid">
-        <!-- Add similar blocks -->
-      </div>
-
-      <h2>Under ₹999</h2>
-      <div class="product-grid">
-        <!-- Add similar blocks -->
+        <!-- Sample featured items -->
+        <a href="#"><img src="https://via.placeholder.com/150" alt="Plant"></a>
+        <a href="#"><img src="https://via.placeholder.com/150" alt="Light"></a>
+        <a href="#"><img src="https://via.placeholder.com/150" alt="Furniture"></a>
+        <a href="#"><img src="https://via.placeholder.com/150" alt="Decor"></a>
+        <a href="#"><img src="https://via.placeholder.com/150" alt="Under 999"></a>
+        <!-- Add up to 40 featured items -->
       </div>
     </section>
   </main>
 
   <footer class="footer">
-    <p>© 2025 UrbanNest | <a href="about.html">About Us</a> | <a href="privacy.html">Privacy Policy</a> | <a href="disclaimer.html">Amazon Disclaimer</a></p>
+    <p>&copy; 2025 UrbanNest. All rights reserved.</p>
+    <p>
+      <a href="about.html">About</a> |
+      <a href="privacy.html">Privacy Policy</a> |
+      <a href="disclaimer.html">Affiliate Disclaimer</a>
+    </p>
   </footer>
-
-  <script>
-    const toggleBtn = document.querySelector('.menu-toggle');
-    const menu = document.querySelector('.menu');
-    toggleBtn.addEventListener('click', () => {
-      menu.classList.toggle('active');
-    });
-  </script>
 </body>
-
 </html>
