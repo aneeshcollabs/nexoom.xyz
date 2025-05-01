@@ -1,4 +1,148 @@
 <!DOCTYPE html>
+
+/* styles.css */
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #faf6f1;
+  color: #333;
+}
+
+.header {
+  background-color: #fff8f0;
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #ddd;
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #7c4f2b;
+}
+
+.nav .menu {
+  list-style: none;
+  display: flex;
+  gap: 1rem;
+}
+
+.nav .menu li a {
+  text-decoration: none;
+  color: #5a3d2b;
+  font-weight: 500;
+}
+
+.menu-toggle {
+  display: none;
+  font-size: 1.5rem;
+  background: none;
+  border: none;
+}
+
+.section {
+  padding: 2rem;
+}
+
+.section h2 {
+  color: #7c4f2b;
+  margin-bottom: 1rem;
+}
+
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  gap: 1rem;
+  max-height: 400px;
+  overflow-y: auto;
+}
+
+.product-grid a,
+.product-grid .product {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  padding: 1rem;
+  text-align: center;
+  border-radius: 8px;
+  text-decoration: none;
+  color: inherit;
+  transition: transform 0.2s ease;
+}
+
+.product-grid a:hover,
+.product-grid .product:hover {
+  transform: scale(1.02);
+  border-color: #a87f5f;
+}
+
+.product img {
+  max-width: 100%;
+  height: auto;
+  margin-bottom: 0.5rem;
+}
+
+.fomo-box {
+  background-color: #ffe8cc;
+  padding: 1.5rem;
+  margin: 2rem;
+  text-align: center;
+  border-left: 5px solid #ff9933;
+  font-weight: bold;
+}
+
+.footer {
+  background-color: #fff3e0;
+  padding: 1rem;
+  text-align: center;
+  font-size: 0.9rem;
+  color: #555;
+  border-top: 1px solid #ddd;
+}
+
+.footer a {
+  color: #7c4f2b;
+  text-decoration: none;
+  margin: 0 0.5rem;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .menu {
+    display: none;
+    flex-direction: column;
+    gap: 0.5rem;
+    background-color: #fff8f0;
+    position: absolute;
+    top: 60px;
+    right: 20px;
+    padding: 1rem;
+    border: 1px solid #ccc;
+  }
+
+  .menu.active {
+    display: flex;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+
+  .product-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 480px) {
+  .product-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+
 <html lang="en">
 
 <head>
