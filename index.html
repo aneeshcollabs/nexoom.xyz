@@ -136,33 +136,45 @@
 }
 
 
- .cat-icon {
-    flex: 1 0 21%;
-    min-width: 120px;
-    text-decoration: none;
-    background-color: blue;
-    border-radius: 10px;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-    padding: 10px;
+ category_icons_css = """
+.category-icons {
+    display: flex;
+    overflow-x: auto;
+    white-space: nowrap;
+    gap: 15px;
+    padding: 10px 0;
+    margin-bottom: 10px;
+}
+
+.cat-icon {
+    flex: 0 0 auto;
+    min-width: 90px;
     text-align: center;
-    font-weight: 600;
+    text-decoration: none;
+    background: white;
+    padding: 8px;
+    border-radius: 10px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.08);
     color: #333;
-    transition: all 0.3s ease;
+    font-size: 12px;
+    font-weight: 600;
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 5px;
+    transition: transform 0.2s ease;
 }
 
 .cat-icon i {
-    font-size: 20px;
-    color: #ffffff;
+    font-size: 18px;
+    color: #0066ff;
+    margin-bottom: 5px;
 }
 
 .cat-icon:hover {
-    transform: translateY(-3px);
+    transform: translateY(-2px);
     color: #0066ff;
 }
+"""
         
         .product-info {
             padding: 15px;
@@ -304,20 +316,20 @@
     
     <main class="container">
        
- <div class="category-icons container" style="margin: 20px auto; display: flex; flex-wrap: wrap; justify-content: space-between; gap: 15px;">
-    <a href="https://www.amazon.in/s?i=electronics" class="cat-icon" title="Electronics"><i class="fa-solid fa-tv"></i> Electronics</a>
-    <a href="https://www.amazon.in/s?i=fashion" class="cat-icon" title="Fashion"><i class="fa-solid fa-shirt"></i> Fashion</a>
-    <a href="https://www.amazon.in/s?i=beauty" class="cat-icon" title="Beauty"><i class="fa-solid fa-spa"></i> Beauty</a>
-    <a href="https://www.amazon.in/s?i=home" class="cat-icon" title="Home"><i class="fa-solid fa-couch"></i> Home</a>
-    <a href="https://www.amazon.in/s?k=kitchen" class="cat-icon" title="Kitchen"><i class="fa-solid fa-blender"></i> Kitchen</a>
-    <a href="https://www.amazon.in/books-used-books-textbooks" class="cat-icon" title="Books"><i class="fa-solid fa-book"></i> Books</a>
-    <a href="https://www.amazon.in/s?i=toys" class="cat-icon" title="Toys"><i class="fa-solid fa-puzzle-piece"></i> Toys</a>
-    <a href="https://www.amazon.in/s?i=sporting" class="cat-icon" title="Sports"><i class="fa-solid fa-dumbbell"></i> Sports</a>
-    <a href="https://www.amazon.in/s?i=mobile" class="cat-icon" title="Mobile Phones"><i class="fa-solid fa-mobile-screen-button"></i> Mobiles</a>
-    <a href="https://www.amazon.in/s?i=computers" class="cat-icon" title="Laptops"><i class="fa-solid fa-laptop"></i> Laptops</a>
-    <a href="https://www.amazon.in/s?i=grocery" class="cat-icon" title="Grocery"><i class="fa-solid fa-apple-whole"></i> Grocery</a>
-    <a href="https://www.amazon.in/s?i=automotive" class="cat-icon" title="Automobiles"><i class="fa-solid fa-car"></i> Automobiles</a>
-</div>       
+ <div class="category-icons container">
+    <a href="https://www.amazon.in/s?i=electronics" class="cat-icon" title="Electronics"><i class="fa-solid fa-tv"></i><span>Electronics</span></a>
+    <a href="https://www.amazon.in/s?i=fashion" class="cat-icon" title="Fashion"><i class="fa-solid fa-shirt"></i><span>Fashion</span></a>
+    <a href="https://www.amazon.in/s?i=beauty" class="cat-icon" title="Beauty"><i class="fa-solid fa-spa"></i><span>Beauty</span></a>
+    <a href="https://www.amazon.in/s?i=home" class="cat-icon" title="Home"><i class="fa-solid fa-couch"></i><span>Home</span></a>
+    <a href="https://www.amazon.in/s?k=kitchen" class="cat-icon" title="Kitchen"><i class="fa-solid fa-blender"></i><span>Kitchen</span></a>
+    <a href="https://www.amazon.in/books-used-books-textbooks" class="cat-icon" title="Books"><i class="fa-solid fa-book"></i><span>Books</span></a>
+    <a href="https://www.amazon.in/s?i=toys" class="cat-icon" title="Toys"><i class="fa-solid fa-puzzle-piece"></i><span>Toys</span></a>
+    <a href="https://www.amazon.in/s?i=sporting" class="cat-icon" title="Sports"><i class="fa-solid fa-dumbbell"></i><span>Sports</span></a>
+    <a href="https://www.amazon.in/s?i=mobile" class="cat-icon" title="Mobile"><i class="fa-solid fa-mobile-screen-button"></i><span>Mobiles</span></a>
+    <a href="https://www.amazon.in/s?i=computers" class="cat-icon" title="Laptops"><i class="fa-solid fa-laptop"></i><span>Laptops</span></a>
+    <a href="https://www.amazon.in/s?i=grocery" class="cat-icon" title="Grocery"><i class="fa-solid fa-apple-whole"></i><span>Grocery</span></a>
+    <a href="https://www.amazon.in/s?i=automotive" class="cat-icon" title="Automobiles"><i class="fa-solid fa-car"></i><span>Cars</span></a>
+</div>
 
 
         <div class="deals-section">
