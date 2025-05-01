@@ -295,6 +295,8 @@
                 flex-direction: column;
             }
         }
+html_content = html_content.replace("</style>", f"{category_icons_css}\n</style>")
+        
     </style>
 </head>
 <body>
@@ -313,6 +315,7 @@
             </nav>
         </div>
     </header>
+html_content = html_content.replace("</header>", f"</header>\n{category_icons_html}")
     
     <main class="container">
        
